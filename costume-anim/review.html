@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Costume Clips — Batch Review (20)</title>
+<style>
+  body { background:#0d0d12; color:#eee; font-family:-apple-system,Helvetica,Arial,sans-serif; margin:0; padding:16px; }
+  h1 { font-size:18px; font-weight:600; margin:4px 0 2px; }
+  p.sub { color:#888; font-size:13px; margin:0 0 16px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:14px; }
+  .card { background:#17171f; border-radius:10px; overflow:hidden; }
+  .card video { width:100%; aspect-ratio:9/16; display:block; background:#000; }
+  .card .label { padding:8px 10px; font-size:13px; display:flex; justify-content:space-between; align-items:center; }
+  .card .label span.n { color:#777; }
+  .hint { color:#666; font-size:12px; margin-top:14px; }
+</style>
+</head>
+<body>
+<h1>Costume Animation Batch — 20 clips</h1>
+<p class="sub">Veo 3.1 fast &middot; 8s each &middot; 720&times;1280 &middot; tap a video for sound</p>
+<div class="grid" id="g"></div>
+<p class="hint">All autoplay muted &amp; loop. Tap any clip to unmute it (mutes the others).</p>
+<script>
+const clips = [
+ ["01","raccoon surgeon"],["02","penguin cowboy"],["03","elephant ballerina"],["04","lion samurai"],
+ ["05","goldfish astronaut"],["06","gorilla businessman"],["07","cat lion"],["08","frog tuxedo"],
+ ["09","chicken football"],["10","sloth f1"],["11","pug viking"],["12","octopus chef"],
+ ["13","hamster dj"],["14","giraffe scuba"],["15","parrot judge"],["16","corgi karate"],
+ ["17","flamingo firefighter"],["18","turtle biker"],["19","bear lifeguard"],["20","deer disco"]
+];
+const files = ["01_raccoon_surgeon","02_penguin_cowboy","03_elephant_ballerina","04_lion_samurai",
+ "05_goldfish_astronaut","06_gorilla_businessman","07_cat_lion","08_frog_tuxedo","09_chicken_football",
+ "10_sloth_f1","11_pug_viking","12_octopus_chef","13_hamster_dj","14_giraffe_scuba","15_parrot_judge",
+ "16_corgi_karate","17_flamingo_firefighter","18_turtle_biker","19_bear_lifeguard","20_deer_disco"];
+const g = document.getElementById('g');
+files.forEach((f,i)=>{
+  const d = document.createElement('div'); d.className='card';
+  d.innerHTML = `<video src="clips/${f}.mp4" muted autoplay loop playsinline></video>
+    <div class="label"><span>${clips[i][1]}</span><span class="n">#${clips[i][0]}</span></div>`;
+  g.appendChild(d);
+});
+document.addEventListener('click', e=>{
+  const v = e.target.closest('video'); if(!v) return;
+  document.querySelectorAll('video').forEach(o=>{ if(o!==v) o.muted=true; });
+  v.muted = !v.muted;
+});
+</script>
+</body>
+</html>
