@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Organic Animal Clips — pick your keepers</title>
+<style>
+body{background:#0b0f14;color:#e8eef5;font-family:-apple-system,system-ui,sans-serif;margin:0;padding:16px}
+h1{font-size:20px;margin:0 0 4px}
+p{color:#8fa0b3;font-size:14px;margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+.card{background:#141b24;border-radius:12px;overflow:hidden}
+video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#000}
+.label{padding:8px 10px;font-size:14px;font-weight:600}
+.label span{color:#5ad16e;margin-right:6px}
+</style></head><body>
+<h1>Organic Animal Clips — 10 from the Flow batch</h1>
+<p>Tap a video to play with controls. Reply with the numbers to ship.</p>
+<div class="grid" id="g"></div>
+<script>
+const clips=[[1,"Alpaca — farm paddock"],[2,"Bison — prairie grass"],[3,"Capybara — walking in grass"],[4,"Hedgehog — snuffling leaves"],[5,"Meerkat — dirt mound"],[6,"Moose — shallow lake"],[7,"Red panda — tree branch"],[8,"River otter — sliding into water"],[9,"Skunk — walking on lawn"],[10,"Sloth — reaching for branch"]];
+const g=document.getElementById('g');
+for(const [n,name] of clips){
+  const p=String(n).padStart(2,'0');
+  const d=document.createElement('div');d.className='card';
+  d.innerHTML=`<video src="clip${p}.mp4" muted loop playsinline autoplay controls></video><div class="label"><span>#${p}</span>${name}</div>`;
+  g.appendChild(d);
+}
+</script></body></html>
