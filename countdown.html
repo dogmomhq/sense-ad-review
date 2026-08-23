@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Countdown Track Audition</title>
+<style>
+body{background:#10140c;color:#f5f1e6;font-family:-apple-system,system-ui,sans-serif;margin:0;padding:24px;max-width:560px;margin:auto}
+h1{font-size:22px;color:#d7f84a} .sub{color:#9aa08c;font-size:13px;margin-bottom:20px;line-height:1.5}
+.card{background:#1a2015;border:1px solid #3a4430;border-radius:14px;padding:16px 18px;margin-bottom:14px;display:flex;align-items:center;gap:16px}
+.n{font-size:30px;font-weight:900;color:#d7f84a;width:36px} .t{flex:1} .t b{font-size:16px} .t div{color:#9aa08c;font-size:12.5px;margin-top:3px}
+button{background:#d7f84a;border:0;border-radius:10px;padding:12px 18px;font-weight:800;font-size:15px;color:#10140c}
+.note{background:#232a1c;border-radius:10px;padding:12px 14px;font-size:12.5px;color:#c9cfba;line-height:1.5;margin-top:18px}
+</style></head><body>
+<h1>Countdown tracks — pick a number</h1>
+<div class="sub">Full 3·2·1·GO as ONE mixed track. Every candidate has beat peaks locked to the exact slam-landing grid (150/750/1350/1950ms) — whichever you pick ships with identical, verified sync. Phone speaker up.</div>
+<div class="card"><div class="n">1</div><div class="t"><b>808 Boom + Roar</b><div>Deep sub kicks, whoosh into each slam, your lion roar on GO</div></div><button onclick="p(1)">PLAY</button></div>
+<div class="card"><div class="n">2</div><div class="t"><b>Laser Charge</b><div>Rising energy zaps 3-2-1, GO = blast + sub drop</div></div><button onclick="p(2)">PLAY</button></div>
+<div class="card"><div class="n">3</div><div class="t"><b>Heartbeat + Explosion</b><div>Current heartbeat beats, GO swaps the roar for a detonation</div></div><button onclick="p(3)">PLAY</button></div>
+<div class="card"><div class="n">4</div><div class="t"><b>Clock + Alarm</b><div>Sharp ticks like a timer arming, GO = alarm bell + boom</div></div><button onclick="p(4)">PLAY</button></div>
+<div class="card"><div class="n">5</div><div class="t"><b>Orchestra Stabs</b><div>Cinematic string stabs stepping up, GO = big brass hit</div></div><button onclick="p(5)">PLAY</button></div>
+<div class="card"><div class="n">6</div><div class="t"><b>Arcade Power-Up</b><div>Retro blips rising, GO = power-up sweep into boom</div></div><button onclick="p(6)">PLAY</button></div>
+<div class="note">Current live track (B99) = heartbeat + roar. Reply with a number to ship it, or mix ("beats from 4, GO from 1"). Any combination keeps perfect sync — the grid is enforced when I mix the file.</div>
+<script>let a=null;function p(i){if(a){a.pause()}a=new Audio('cd'+i+'.mp3');a.play()}</script>
+</body></html>
