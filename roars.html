@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>GO Roar Audition</title>
+<style>body{background:#0a0a0f;color:#eee;font-family:-apple-system,sans-serif;margin:0;padding:20px}
+h1{font-size:20px;text-align:center}.card{background:#15151f;border-radius:14px;padding:14px 16px;margin:12px auto;max-width:480px}
+.name{font-weight:700;color:#ADFF2F;margin-bottom:4px}.desc{font-size:13px;color:#999;margin-bottom:10px}
+button{background:#ADFF2F;color:#000;border:0;border-radius:10px;padding:12px 28px;font-size:16px;font-weight:800;width:100%}
+</style></head><body><h1>🦁 GO Roar — pick one</h1>
+<div class="card"><div class="name">1 — Attack Roar</div><div class="desc">Deep, punchy, fast onset. No frills.</div><button onclick="p('roar1')">▶ PLAY</button></div>
+<div class="card"><div class="name">2 — Cinematic</div><div class="desc">Movie-trailer roar, bass rumble, big reverb tail.</div><button onclick="p('roar2')">▶ PLAY</button></div>
+<div class="card"><div class="name">3 — Short Bark</div><div class="desc">1.5s explosive burst, esports style, zero buildup.</div><button onclick="p('roar3')">▶ PLAY</button></div>
+<div class="card"><div class="name">4 — Roar + Bass Drop</div><div class="desc">Layered with an impact hit, game round-start energy.</div><button onclick="p('roar4')">▶ PLAY</button></div>
+<div class="card"><div class="name">5 — Raw &amp; Angry</div><div class="desc">Gritty snarl, documentary close-mic, no polish.</div><button onclick="p('roar5')">▶ PLAY</button></div>
+<div class="card"><div class="name">6 — Arena Echo</div><div class="desc">Roar rising into a triumphant echo, crowd energy under it.</div><button onclick="p('roar6')">▶ PLAY</button></div>
+<audio id="a"></audio>
+<script>function p(n){var a=document.getElementById('a');a.src=n+'.mp3';a.play();}</script>
+</body></html>
