@@ -11,11 +11,13 @@ button{background:#d7f84a;border:0;border-radius:10px;padding:12px 18px;font-wei
 <h1>Countdown tracks — pick a number</h1>
 <div class="sub">Full 3·2·1·GO as ONE mixed track. Every candidate has beat peaks locked to the exact slam-landing grid (150/750/1350/1950ms) — whichever you pick ships with identical, verified sync. Phone speaker up.</div>
 <div class="card"><div class="n">1</div><div class="t"><b>808 Boom + Roar</b><div>Deep sub kicks, whoosh into each slam, your lion roar on GO</div></div><button onclick="p(1)">PLAY</button></div>
+<div class="card" style="border-color:#d7f84a"><div class="n">1B</div><div class="t"><b>808 Boom + Roar — APPROACHING</b><div>Your pick, rebuilt: each beat louder + closer (muffled/far &rarr; bright/in your face), roar untouched. SHIPPED as B105.</div></div><button onclick="pb()">PLAY</button></div>
 <div class="card"><div class="n">2</div><div class="t"><b>Laser Charge</b><div>Rising energy zaps 3-2-1, GO = blast + sub drop</div></div><button onclick="p(2)">PLAY</button></div>
 <div class="card"><div class="n">3</div><div class="t"><b>Heartbeat + Explosion</b><div>Current heartbeat beats, GO swaps the roar for a detonation</div></div><button onclick="p(3)">PLAY</button></div>
 <div class="card"><div class="n">4</div><div class="t"><b>Clock + Alarm</b><div>Sharp ticks like a timer arming, GO = alarm bell + boom</div></div><button onclick="p(4)">PLAY</button></div>
 <div class="card"><div class="n">5</div><div class="t"><b>Orchestra Stabs</b><div>Cinematic string stabs stepping up, GO = big brass hit</div></div><button onclick="p(5)">PLAY</button></div>
 <div class="card"><div class="n">6</div><div class="t"><b>Arcade Power-Up</b><div>Retro blips rising, GO = power-up sweep into boom</div></div><button onclick="p(6)">PLAY</button></div>
 <div class="note">Current live track (B99) = heartbeat + roar. Reply with a number to ship it, or mix ("beats from 4, GO from 1"). Any combination keeps perfect sync — the grid is enforced when I mix the file.</div>
-<script>let a=null;function p(i){if(a){a.pause()}a=new Audio('cd'+i+'.mp3');a.play()}</script>
+<script>let a=null;function pb(){if(a){a.pause()}a=new Audio('cd1b.mp3');a.play()}
+function p(i){if(a){a.pause()}a=new Audio('cd'+i+'.mp3');a.play()}</script>
 </body></html>
